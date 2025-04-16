@@ -1,30 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <title> GEOG 485L --My First Map--</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="myStyle.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <p>
-        My first map will appear here:
-    </p>
-    <div id="mapId" style="height:400px; width: 600px"></div>
-    <script>
-        // Bandelier Hall East lat/long: 35.0843° N, 106.6241° W
-        //create a map variable "mymap" that points to the map placed in the mapId <div>
-        //zoom the view on BandelieHAll East building at a 17 zoom level
-        var mymap = L.map('mapId').setView([35.0852, -106.6250], 17);
 
-        //create variable named "osm" that is used to hold OpenStreetMap tile layer.
-        var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+<!-- note that the body tag can have attribute as well -->
 
-        //add the OpenStreetMap tile layer (i.e., the variable osm you defined above) to the map
-        osm.addTo(mymap);
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-        //add a marker on the tile layer
-        var marker = L.marker([35.0852, -106.6250]).addTo(mymap);
+  <br>
+  <br>
+  <h2>Bootstrap Scrollspy Plugin (Advanced)</h2>
+  <p> (Credit: See <a href="https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp" target="_blank"> HERE</a> for
+    the
+    well-explained source.)</p>
 
-    </script>
+  <p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.</p>
+  <p>Hint: you can use Scrollspy on your personal website mini-assignment.</p>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#section41">Section 4-1</a></li>
+                <li><a href="#section42">Section 4-2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="section1" class="container-fluid">
+    <h1>Section 1</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+  </div>
+  <div id="section2" class="container-fluid">
+    <h1>Section 2</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+  </div>
+  <div id="section3" class="container-fluid">
+    <h1>Section 3</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+  </div>
+  <div id="section41" class="container-fluid">
+    <h1>Section 4 Submenu 1</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+  </div>
+  <div id="section42" class="container-fluid">
+    <h1>Section 4 Submenu 2</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+  </div>
+
+
 </body>
+
 </html>
